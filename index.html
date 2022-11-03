@@ -9,7 +9,7 @@
 <body>
 <div id="header">
 	<div id="logo"></div>
-	<div id="menu">
+	<div id="menu" onmouseover="menuGlowOn()" onmouseout="menuGlowOff()">
 		<div id="menubar1" class="menubar"></div>
 		<div id="menubar2" class="menubar"></div>
 		<div id="menubar3" class="menubar"></div>
@@ -17,7 +17,17 @@
 </div>
 <div id=""></div>
 <script>
+function menuGlowOn() {
+	document.getElementById("menubar1").style.boxShadow = "0px 0px 5px 1px #ffffff";
+	document.getElementById("menubar2").style.boxShadow = "0px 0px 5px 1px #ffffff";
+	document.getElementById("menubar3").style.boxShadow = "0px 0px 5px 1px #ffffff";
 
+}
+function menuGlowOff() {
+	document.getElementById("menubar1").style.boxShadow = "none";
+	document.getElementById("menubar2").style.boxShadow = "none";
+	document.getElementById("menubar3").style.boxShadow = "none";
+}
 </script>
 </body>
 </html>
