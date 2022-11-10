@@ -6,6 +6,7 @@ body {
 a {
 	color: #ffffff;
 	text-decoration: none;
+	user-select: none;
 }
 a.podstrona {
 	font-family: 'Nunito Sans', sans-serif;
@@ -81,4 +82,69 @@ a.podstrona:hover {
 }
 #menubar1 {
 	margin-top: 25px;
+}
+#sidemenu {
+	position: absolute;
+	display: block;
+	visibility: hidden;
+	width: 250px;
+	height: 250px;
+	right: 0;
+	background-color: #101010;
+}
+#menumode {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 80px;
+	top: 30px;
+	left: 25px;
+	background-color: red;
+	cursor: pointer;
+}
+#menumodeicon {
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	top: 10px;
+	left: 15px;
+	background-color: blue;
+}
+#menumodetext {
+	position: absolute;
+	display: block;
+	width: 125px;
+	height: 60px;
+	top: 10px;
+	left: 70px;
+	background-color: purple;
+}
+#menulang {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 80px;
+	top: 140px;
+	left: 25px;
+	background-color: green;
+	cursor: pointer;
+}
+#menulangicon {
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	top: 10px;
+	left: 15px;
+	background-color: blue;
+}
+#menulangtext {
+	position: absolute;
+	display: block;
+	width: 125px;
+	height: 60px;
+	top: 10px;
+	left: 70px;
+	background-color: purple;
 }

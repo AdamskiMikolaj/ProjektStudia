@@ -21,6 +21,16 @@
 		<div id="menubar3" class="menubar"></div>
 	</div>
 </div>
+<div id="sidemenu">
+	<div id="menumode">
+		<div id="menumodeicon"></div>
+		<div id="menumodetext"></div>
+	</div>
+	<div id="menulang">
+		<div id="menulangicon"></div>
+		<div id="menulangtext"></div>
+	</div>
+</div>
 <div id=""></div>
 <script>
 function menuGlowOn() {
@@ -33,6 +43,20 @@ function menuGlowOff() {
 	document.getElementById("menubar1").style.boxShadow = "none";
 	document.getElementById("menubar2").style.boxShadow = "none";
 	document.getElementById("menubar3").style.boxShadow = "none";
+}
+
+// włącz/wyłącz sidebar menu
+
+var licznik = 0;
+var menubutton = document.getElementById("menu");
+menubutton.onclick = function() {
+	licznik++;
+	if (licznik == 1) {
+		menubutton = document.getElementById("sidemenu").style.visibility = "visible";
+	} else if (licznik == 2) {
+		menubutton = document.getElementById("sidemenu").style.visibility = "hidden";
+		licznik = 0;
+	}
 }
 </script>
 </body>
