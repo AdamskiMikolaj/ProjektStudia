@@ -48,7 +48,7 @@ a.podstrona:hover {
 	margin: auto;
 	left: 0;
 	right: 0;
-	background-color: #db3737;
+	cursor: pointer;
 }
 #sklep {
 	position: absolute;
@@ -113,7 +113,6 @@ a.podstrona:hover {
 	height: 50px;
 	top: 15px;
 	left: 15px;
-	background-color: white;
 }
 #menumodetext {
 	position: absolute;
@@ -146,7 +145,6 @@ a.podstrona:hover {
 	height: 50px;
 	top: 15px;
 	left: 15px;
-	background-color: white;
 }
 #menulangtext {
 	position: absolute;
