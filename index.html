@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c43f04151a.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -32,7 +33,10 @@
 		<div id="menulangtext">Zmień język</div>
 	</div>
 </div>
-<div id=""></div>
+<div id="banner1">
+	<div id="banner1header">DREAM MACHINE</div>
+	<div id="banner1text">ZBUDUJ MASZYNĘ SWOICH MARZEŃ</div>
+</div>
 <script>
 function menuGlowOn() {
 	document.getElementById("menubar1").style.boxShadow = "0px 0px 5px 1px #ffffff";
@@ -48,17 +52,17 @@ function menuGlowOff() {
 
 // włącz/wyłącz sidebar menu
 
-<!-- var licznik = 0; -->
-<!-- var menubutton = document.getElementById("menu"); -->
-<!-- menubutton.onclick = function() { -->
-	<!-- licznik++; -->
-	<!-- if (licznik == 1) { -->
-		<!-- menubutton = document.getElementById("sidemenu").style.visibility = "visible"; -->
-	<!-- } else if (licznik == 2) { -->
-		<!-- menubutton = document.getElementById("sidemenu").style.visibility = "hidden"; -->
-		<!-- licznik = 0; -->
-	<!-- } -->
-<!-- } -->
+var licznik = 0;
+var menubutton = document.getElementById("menu");
+menubutton.onclick = function() {
+	licznik++;
+	if (licznik == 1) {
+		menubutton = document.getElementById("sidemenu").style.visibility = "visible";
+	} else if (licznik == 2) {
+		menubutton = document.getElementById("sidemenu").style.visibility = "hidden";
+		licznik = 0;
+	}
+}
 </script>
 </body>
 </html>
