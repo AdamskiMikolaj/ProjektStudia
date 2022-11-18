@@ -39,9 +39,11 @@
 	<div id="banner1text">ZBUDUJ MASZYNĘ SWOICH MARZEŃ</div>
 </div>
 <div id="content1">
-	
+
 </div>
 <script>
+// funkcje podświetlania menu
+
 function menuGlowOn() {
 	document.getElementById("menubar1").style.boxShadow = "0px 0px 5px 1px #ffffff";
 	document.getElementById("menubar2").style.boxShadow = "0px 0px 5px 1px #ffffff";
@@ -67,6 +69,20 @@ menubutton.onclick = function() {
 		licznik = 0;
 	}
 }
+
+// zmień obrazy banner1
+
+var liczObraz = 0;
+var Obrazy = ["grafika/background1.jpg", "grafika/background2.jpg", "grafika/background3.jpg", ]
+
+function zmienObraz() {
+	liczObraz > 1 ? liczObraz = 0 : liczObraz++;
+	document.getElementById("banner1image").style.backgroundImage = "url("+ Obrazy[liczObraz] + ")";
+}
+
+window.onload = function () {
+    setInterval(zmienObraz, 5000);
+};
 </script>
 </body>
 </html>
