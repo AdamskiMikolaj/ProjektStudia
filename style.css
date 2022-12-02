@@ -231,20 +231,24 @@ a.podstrona:hover {
 	from {opacity: 0%;}
 	to {opacity: 100%;}
 }
+@font-face {
+	font-family: Open Sans;
+	src: url(fonts/OpenSans.ttf);
+}
 #content1 {
 	position: relative;
 	width: 100%;
-	height: 650px;
+	height: 900px;
 	border-top: 1px solid #0d0d0d;
 	background-color: #1e1e1e;
 }
 #content1header {
-	position: absolute;
+	position: relative;
 	display: block;
 	width: 550px;
 	height: 100px;
-	left: 100px;
-	top: 100px;
+	margin: 0 auto;
+	top: 50px;
 	font-family: Paytone One;
 	font-size: 56px;
 	text-align: center;
@@ -253,31 +257,136 @@ a.podstrona:hover {
 	user-select: none;
 }
 #content1text {
-	position: absolute;
+	position: relative;
 	display: block;
-	width: 750px;
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+	top: 50px;
+	font-family: Open Sans;
+	font-size: 28px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+.card {
+	position: absolute;
+	float: left;
+	top: 300px;
+	width: 20%;
 	height: 500px;
-	left: 200px;
-	top: 225px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 20px #000000;
+	transition: transform 0.5s;
+}
+.card:hover {
+	transform: scale(1.05);
+}
+.cardheader {
+	position: relative;
+	height: 30%;
+	margin-left: 5%;
+	margin-right: 5%;
+	top: 7.5%;
 	font-family: Paytone One;
 	font-size: 28px;
+	text-align: center;
 	color: #ffffff;
-	text-shadow: 2px 2px 5px #000000;
-	text-align: left;
 	user-select: none;
 }
-#content1image {
+.cardtext {
+	position: relative;
+	height: 30%;
+	margin-left: 5%;
+	margin-right: 5%;
+	top: 20%;
+	font-family: Nunito Sans;
+	font-size: 24px;
+	text-align: center;
+	color: #ffffff;
+	user-select: none;
+}
+#card1 {
+	left: 10%;
+}
+#card2 {
+	left: 40%;
+}
+#card3 {
+	left: 70%;
+}
+#parallax {
+	border-top: 1px solid #0d0d0d;
+	border-bottom: 1px solid #0d0d0d;
+	background-image: url("grafika/nebulaparallax.jpg");
+	min-height: 700px;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
+}
+#content2header {
 	position: absolute;
-	display: block;
-	width: 700px;
-	height: 550px;
-	float: right;
-	top: 100px;
-	right: 200px;
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 50px;
+	font-family: Paytone One;
+	font-size: 56px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
 	user-select: none;
 }
-#pcrgbimg {
-	max-width: 100%;
-	max-height: 100%;
-	object-fit: contain;
+#content2 {
+	position: relative;
+	width: 100%;
+	height: 700px;
+}
+.box {
+	width: 250px;
+	height: 250px;
+	background-color: red;
+}
+#content3header {
+	position: relative;
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+	top: 25px;
+	font-family: Paytone One;
+	font-size: 56px;
+	text-align: center;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+#sections {
+	position: relative;
+	margin-top: 25px;
+	width: 100%;
+	height: 600px;
+	background-color: greenyellow;
+}
+#section1 {
+	float: left;
+	position: relative;
+	width: 33.3%;
+	height: 600px;
+	background-color: green;
+}
+#section2 {
+	float: left;
+	position: relative;
+	width: 33.3%;
+	height: 600px;
+	background-color: blue;
+}
+#section3 {
+	float: left;
+	position: relative;
+	width: 33.4%;
+	height: 600px;
+	background-color: cyan;
 }
