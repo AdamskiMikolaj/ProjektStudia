@@ -345,9 +345,50 @@ a.podstrona:hover {
 	height: 700px;
 }
 .box {
+	position: absolute;
 	width: 250px;
 	height: 250px;
-	background-color: red;
+	top: 250px;
+	box-shadow: 5px 5px 20px #000000;
+	background-color: #1e1e1e;
+	justify-content: center;
+	align-items: center;
+}
+.kolo {
+	position: relative;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+	top: 50px;
+	justify-content: center;
+	align-items: center;
+	--clr: #04fc43;
+	--num: 85;
+	transform: rotate(270deg);
+}
+.kolo svg circle {
+	width: 100%;
+	height: 100%;
+	fill: transparent;
+	stroke-width: 2;
+	stroke: #101010;
+	transform: translate(5px, 5px);
+}
+.kolo svg circle:nth-child(2) {
+	stroke: var(--clr);
+	stroke-dasharray: 440;
+	stroke-dashoffset: calc(440 - (440 * var(--num))/100);
+}
+#box1 {
+	left: 20%;
+}
+#box2 {
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+#box3 {
+	right: 20%;
 }
 #content3header {
 	position: relative;
