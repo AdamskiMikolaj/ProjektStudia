@@ -2,7 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #1e1e1e;
-	overflow: auto;
+	overflow-x: auto;
 }
 a {
 	color: #ffffff;
@@ -480,8 +480,8 @@ a.podstrona:hover {
 	width: 100%;
 	height: 100px;
 	margin: 0 auto;
-	top: 25px;
-	font-family: Paytone One;
+	top: 35px;
+	font-family: 'Press Start 2P';
 	font-size: 56px;
 	text-align: center;
 	color: #ffffff;
@@ -493,26 +493,42 @@ a.podstrona:hover {
 	margin-top: 25px;
 	width: 100%;
 	height: 600px;
-	background-color: greenyellow;
+	overflow: hidden;
+	border-top: 1px solid #0d0d0d;
+	border-bottom: 1px solid #0d0d0d;
 }
-#section1 {
+.section {
 	float: left;
 	position: relative;
 	width: 33.3%;
 	height: 600px;
-	background-color: green;
+	cursor: pointer;
+	user-select: none;
 }
-#section2 {
-	float: left;
-	position: relative;
-	width: 33.3%;
-	height: 600px;
-	background-color: blue;
+.section:hover .sectionimage {
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
 }
-#section3 {
+.sectionimage {
+	display: block;
 	float: left;
-	position: relative;
-	width: 33.4%;
+	position: absolute;
+	width: 100%;
 	height: 600px;
-	background-color: cyan;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	filter: blur(2.5px) grayscale(100%);
+	-webkit-filter: blur(2.5px) grayscale(100%);
+}
+.sectionheader {
+	display: block;
+	margin-top: 300px;
+	font-family: 'Press Start 2P';
+	font-size: 48px;
+	color: #ffffff;
+	text-shadow: 0px 0px 5px #000000;
+	text-align: center;
+	transform:rotate(315deg);
 }
