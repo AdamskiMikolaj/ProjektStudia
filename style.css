@@ -342,7 +342,7 @@ a.podstrona:hover {
 #content2 {
 	position: relative;
 	width: 100%;
-	height: 700px;
+	height: 800px;
 }
 .box {
 	position: absolute;
@@ -354,6 +354,17 @@ a.podstrona:hover {
 	justify-content: center;
 	align-items: center;
 }
+#box1 {
+	left: 20%;
+}
+#box2 {
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+#box3 {
+	right: 20%;
+}
 .kolo {
 	position: relative;
 	margin: 0 auto;
@@ -362,9 +373,11 @@ a.podstrona:hover {
 	top: 50px;
 	justify-content: center;
 	align-items: center;
-	--clr: #04fc43;
-	--num: 85;
+}
+.kolo svg {
 	transform: rotate(270deg);
+	width: 150px;
+	height: 150px;
 }
 .kolo svg circle {
 	width: 100%;
@@ -378,17 +391,89 @@ a.podstrona:hover {
 	stroke: var(--clr);
 	stroke-dasharray: 440;
 	stroke-dashoffset: calc(440 - (440 * var(--num))/100);
+	opacity: 0;
 }
-#box1 {
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+.koniec {
+	position: absolute;
+	inset: 5px;
+	opacity: 0;
+	z-index: 2;
+	animation: ruchKropka 2s ease-out forwards;
+}
+@keyframes ruchKropka {
+	from {opacity: 0; transform: rotate(0deg);}
+	to {opacity: 1; transform: rotate(calc(3.6deg * var(--num)));}
+}
+.koniec::before
+{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: var(--clr);
+	transform: translateX(-50%);
+}
+.boxtext {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	font-family: Nunito Sans;
+	font-size: 32px;
+	color: #ffffff;
+	letter-spacing: 1px;
+}
+#boxtext1 {
+	animation: fadeIn 0.75s linear forwards;
+	animation-delay: 2s;
+}
+#boxtext2 {
+	animation: fadeIn 0.75s linear forwards;
+	animation-delay: 2.25s;
+}
+#boxtext3 {
+	animation: fadeIn 0.75s linear forwards;
+	animation-delay: 2.5s;
+}
+.boxdesc {
+	position: absolute;
+	float: left;
+	top: 550px;
+	width: 250px;
+	height: 75px;
+	padding-top: 25px;
+	box-shadow: 5px 5px 20px #000000;
+	background-color: #1e1e1e;
+	opacity: 0;
+	font-family: Open Sans;
+	font-size: 32px;
+	color: #ffffff;
+	text-align: center;
+	user-select: none;
+	animation: fadeIn 0.75s ease-out forwards;
+}
+#boxdesc1 {
 	left: 20%;
+	animation-delay: 2s;
 }
-#box2 {
+#boxdesc2 {
 	margin: auto;
 	left: 0;
 	right: 0;
+	animation-delay: 2.25s;
 }
-#box3 {
+#boxdesc3 {
 	right: 20%;
+	animation-delay: 2.5s;
 }
 #content3header {
 	position: relative;
