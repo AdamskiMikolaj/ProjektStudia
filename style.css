@@ -301,7 +301,7 @@ a.podstrona:hover {
 	margin-left: 5%;
 	margin-right: 5%;
 	top: 20%;
-	font-family: Nunito Sans;
+	font-family: 'Nunito Sans', sans-serif;
 	font-size: 24px;
 	text-align: center;
 	color: #ffffff;
@@ -427,7 +427,7 @@ a.podstrona:hover {
 	justify-content: center;
 	align-items: center;
 	opacity: 0;
-	font-family: Nunito Sans;
+	font-family: 'Nunito Sans', sans-serif;
 	font-size: 32px;
 	color: #ffffff;
 	letter-spacing: 1px;
@@ -458,6 +458,7 @@ a.podstrona:hover {
 	font-size: 32px;
 	color: #ffffff;
 	text-align: center;
+	text-shadow: 0px 0px 10px #000000;
 	user-select: none;
 	animation: fadeIn 0.75s ease-out forwards;
 }
@@ -643,7 +644,11 @@ a.podstrona:hover {
 	width: 20%;
 	height: 300px;
 	left: 20%;
-	background-color: red;
+	border: 1px solid cyan;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 34px;
+	color: #ffffff;
+	text-align: center;
 }
 #footercontact {
 	display: block;
@@ -653,7 +658,11 @@ a.podstrona:hover {
 	margin: auto;
 	left: 0;
 	right: 0;
-	background-color: green;
+	border: 1px solid lime;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 34px;
+	color: #ffffff;
+	text-align: center;
 }
 #footermisc {
 	display: block;
@@ -710,7 +719,7 @@ a.podstrona:hover {
 	width: 100%;
 	bottom: 0;
 	text-align: center;
-	font-family: Nunito Sans;
+	font-family: 'Nunito Sans', sans-serif;
 	font-size: 14px;
 	color: #ffffff;
 	user-select: none;
