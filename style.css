@@ -605,6 +605,11 @@ a.podstrona:hover {
 	position: absolute;
 	width: 10%;
 	height: 100px;
+	cursor: pointer;
+}
+.choice:hover {
+	box-shadow: 0px 0px 10px #000000;
+	background-color: #353535;
 }
 #choice2 {
 	left: 10%;
@@ -633,43 +638,26 @@ a.podstrona:hover {
 #choice10 {
 	left: 90%;
 }
-#footer {
-	width: 100%;
-	height: 300px;
-	background-color:#1e1e1e;
-}
-#footershop {
-	display: block;
+.grafikaproducenci {
 	position: absolute;
-	width: 20%;
-	height: 300px;
-	left: 20%;
-	border: 1px solid cyan;
-	font-family: 'Nunito Sans', sans-serif;
-	font-size: 34px;
-	color: #ffffff;
-	text-align: center;
-}
-#footercontact {
-	display: block;
-	position: absolute;
-	width: 20%;
-	height: 300px;
+	height: 100px;
 	margin: auto;
 	left: 0;
 	right: 0;
-	border: 1px solid lime;
-	font-family: 'Nunito Sans', sans-serif;
-	font-size: 34px;
-	color: #ffffff;
-	text-align: center;
+	max-width: 90%;
+}
+#footer {
+	width: 100%;
+	height: 300px;
+	background-color:#101010;
 }
 #footermisc {
 	display: block;
 	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
 	width: 20%;
-	height: 300px;
-	right: 20%;
 }
 #footermisc img {
 	position: absolute;
@@ -684,13 +672,24 @@ a.podstrona:hover {
 	width: 100%;
 	height: 100px;
 }
+.fa-brands {
+	display: block;
+	position: absolute;
+	left: 17.5px;
+	top: 17.5px;
+	font-size: 40px;
+	color: #ffffff;
+}
+.fa-instagram {
+	left: 20px;
+}
 #footerfacebook {
 	position: absolute;
 	left: 10%;
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
-	background-color: red;
+	background-color: #4267b2;
 	cursor: pointer;
 }
 #footertwitter {
@@ -701,7 +700,7 @@ a.podstrona:hover {
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
-	background-color: red;
+	background-color: #1da1f2;
 	cursor: pointer;
 }
 #footerinstagram {
@@ -710,38 +709,17 @@ a.podstrona:hover {
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
-	background-color: red;
+	background-image: linear-gradient(#833ab4,#e1306c,#f56040,#fcaf45);
 	cursor: pointer;
 }
 #footercopyright {
 	display: block;
 	position: absolute;
 	width: 100%;
-	bottom: 0;
+	top: 270px;
 	text-align: center;
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 14px;
 	color: #ffffff;
 	user-select: none;
-}
-#footerreturn {
-	display: block;
-	position: relative;
-	float: right;
-	top: 100px;
-	right: 5%;
-	width: 100px;
-	height: 100px;
-	text-align: center;
-	font-size: 78px;
-	color: #ffffff;
-	background-color: #101010;
-	border-radius: 50%;
-	box-shadow: 5px 5px 20px #000000;
-	text-shadow: 0px 0px 10px #000000;
-	cursor: pointer;
-}
-.fa-solid {
-	position: relative;
-	bottom: -5px;
 }
