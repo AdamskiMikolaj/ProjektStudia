@@ -450,12 +450,9 @@ a.podstrona:hover {
 	top: 550px;
 	width: 250px;
 	height: 75px;
-	padding-top: 25px;
-	box-shadow: 5px 5px 20px #000000;
-	background-color: #1e1e1e;
 	opacity: 0;
 	font-family: Open Sans;
-	font-size: 32px;
+	font-size: 48px;
 	color: #ffffff;
 	text-align: center;
 	text-shadow: 0px 0px 10px #000000;
@@ -467,6 +464,7 @@ a.podstrona:hover {
 	animation-delay: 2s;
 }
 #boxdesc2 {
+	width: 350px;
 	margin: auto;
 	left: 0;
 	right: 0;
@@ -586,6 +584,17 @@ a.podstrona:hover {
 	border: 1px solid #000000;
 	box-shadow: 5px 5px 20px #000000;
 	background-color: #1e1e1e;
+	visibility: hidden;
+}
+#logoareaimage {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	top: 8px;
+	right: 0;
+	width: 95%;
+	height: 95%;
+	user-select: none;
 }
 #logolist {
 	display: block;
@@ -605,37 +614,33 @@ a.podstrona:hover {
 	position: absolute;
 	width: 10%;
 	height: 100px;
-	cursor: pointer;
+	user-select: none;
 }
-.choice:hover {
-	box-shadow: 0px 0px 10px #000000;
-	background-color: #353535;
-}
-#choice2 {
+#choice1 {
 	left: 10%;
 }
-#choice3 {
+#choice2 {
 	left: 20%;
 }
-#choice4 {
+#choice3 {
 	left: 30%;
 }
-#choice5 {
+#choice4 {
 	left: 40%;
 }
-#choice6 {
+#choice5 {
 	left: 50%;
 }
-#choice7 {
+#choice6 {
 	left: 60%;
 }
-#choice8 {
+#choice7 {
 	left: 70%;
 }
-#choice9 {
+#choice8 {
 	left: 80%;
 }
-#choice10 {
+#choice9 {
 	left: 90%;
 }
 .grafikaproducenci {
