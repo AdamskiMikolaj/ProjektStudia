@@ -1,0 +1,321 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #1e1e1e;
+	overflow-x: auto;
+}
+a {
+	color: #ffffff;
+	text-decoration: none;
+	user-select: none;
+}
+a.podstrona {
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 33px;
+	color: #ffffff;
+	cursor: pointer;
+}
+a.podstrona:hover {
+	text-shadow: 0px 0px 10px #ffffff;
+}
+#header {
+	width: 100%;
+	height: 75px;
+	background-color: #101010;
+}
+#blog {
+	position: absolute;
+	display: block;
+	width: 150px;
+	height: 50px;
+	top: 15px;
+	left: 150px;
+	text-align: center;	
+}
+#kontakt {
+	position: absolute;
+	display: block;
+	width: 150px;
+	height: 50px;
+	top: 15px;
+	left: 450px;
+	text-align: center;
+}
+#logo {
+	position: absolute;
+	display: block;
+	width: 300px;
+	height: 75px;
+	margin: auto;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+}
+#sklep {
+	position: absolute;
+	display: block;
+	width: 250px;
+	height: 50px;
+	top: 12.5px;
+	right: 300px;
+	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 38px;
+	cursor: pointer;
+	text-decoration: none;
+}
+#sklep:hover {
+	text-shadow: 0px 0px 20px #ffffff;
+}
+#menu {
+	float: right;
+	height: 75px;
+	width: 75px;
+	cursor: pointer;
+}
+.menubar {
+	width: 35px;
+	height: 5px;
+	margin: 6px auto;
+	border-radius: 25px;
+	background-color: #ffffff;
+	user-select: none;
+}
+#menubar1 {
+	margin-top: 25px;
+}
+#sidemenu {
+	position: absolute;
+	display: block;
+	visibility: hidden;
+	width: 250px;
+	height: 250px;
+	border-top: 1px solid #0d0d0d;
+	right: 0;
+	background-color: #101010;
+	z-index: 1;
+}
+#menumode {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 80px;
+	top: 30px;
+	left: 25px;
+	background-color: #0d0d0d;
+	cursor: pointer;
+}
+#menumodetext:hover {
+	text-shadow: 0px 0px 10px #ffffff;
+}
+#menumodeicon {
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	top: 15px;
+	left: 15px;
+	text-align: center;
+	font-size: 35px;
+	color: #ffffff;
+	transition: transform 0.5s;
+}
+#menumode:hover #menumodeicon {
+	transform: scale(1.05);
+}
+#menumodetext {
+	position: absolute;
+	display: block;
+	width: 125px;
+	height: 60px;
+	top: 30px;
+	left: 80px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+}
+#menulang {
+	position: absolute;
+	display: block;
+	width: 200px;
+	height: 80px;
+	top: 140px;
+	left: 25px;
+	background-color: #0d0d0d;
+	cursor: pointer;
+}
+#menulang:hover #menulangtext {
+	text-shadow: 0px 0px 10px #ffffff;
+}
+#menulangicon {
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: 50px;
+	top: 15px;
+	left: 15px;
+	text-align: center;
+	font-size: 35px;
+	color: #ffffff;
+	transition: transform 0.5s;
+}
+#menulang:hover #menulangicon {
+	transform: scale(1.05);
+}
+#menulangtext {
+	position: absolute;
+	display: block;
+	width: 125px;
+	height: 60px;
+	top: 30px;
+	left: 80px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+}
+.fa-lightbulb, .fa-language {
+	margin-top: 7.5px;
+}
+#contactheader1 {
+	width: 100%;
+	height: 100px;
+	padding-top: 25px;
+	font-family: Paytone One;
+	font-size: 56px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+#contactsocialcontent {
+	width: 100%;
+	height: 600px;
+	border-top: 1px solid #0d0d0d;
+	border-bottom: 1px solid #0d0d0d;
+	background-color: #4267b2;
+}
+#contactsocialbuttons {
+	width: 100%;
+	height: 150px;
+	padding-top: 25px;
+}
+.socialbutton {
+	position: absolute;
+	width: 125px;
+	height: 125px;
+	margin: auto;
+	border-radius: 50%;
+	box-shadow: 5px 5px 20px #000000;
+	cursor: pointer;
+	transition: transform 0.1s;
+}
+.socialbutton:hover {
+	transform: scale(1.1);
+}
+#buttonfacebook {
+	left: 0;
+	right: 30%;
+	background-color: #4267b2;
+}
+#buttontwitter {
+	left: 0;
+	right: 10%;
+	background-color: #1da1f2;
+}
+#buttoninstagram {
+	left: 10%;
+	right: 0;
+	background-image: linear-gradient(#833ab4,#e1306c,#f56040,#fcaf45);
+}
+#buttontiktok {
+	left: 30%;
+	right: 0;
+	background-image: linear-gradient(#00f2ea,#ff0050);
+}
+#contactsocialbuttons .fa-brands {
+	position: absolute;
+	left: 35px;
+	top: 35px;
+	font-size: 55px;
+	color: #ffffff;
+}
+#contactsocialbuttons .fa-instagram {
+	left: 37.5px;
+}
+#footer {
+	width: 100%;
+	height: 300px;
+	background-color:#101010;
+}
+#footermisc {
+	display: block;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	width: 20%;
+}
+#footermisc img {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	top: 25px;
+	right: 0;
+}
+#footersocial {
+	position: absolute;
+	top: 115px;
+	width: 100%;
+	height: 100px;
+}
+#footersocial .fa-brands {
+	display: block;
+	position: absolute;
+	left: 17.5px;
+	top: 17.5px;
+	font-size: 40px;
+	color: #ffffff;
+}
+#footersocial .fa-instagram {
+	left: 20px;
+}
+#footerfacebook {
+	position: absolute;
+	left: 10%;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background-color: #4267b2;
+	cursor: pointer;
+}
+#footertwitter {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background-color: #1da1f2;
+	cursor: pointer;
+}
+#footerinstagram {
+	position: absolute;
+	right: 10%;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background-image: linear-gradient(#833ab4,#e1306c,#f56040,#fcaf45);
+	cursor: pointer;
+}
+#footercopyright {
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 270px;
+	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	user-select: none;
+}
