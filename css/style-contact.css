@@ -192,7 +192,64 @@ a.podstrona:hover {
 	height: 600px;
 	border-top: 1px solid #0d0d0d;
 	border-bottom: 1px solid #0d0d0d;
+}
+#contactsocialfirst {
+	width: 100%;
+	height: 600px;
+	background-color: #181818;
+	display: block;
+}
+#contactsocialfacebook {
+	width: 100%;
+	height: 600px;
 	background-color: #4267b2;
+	display: none;
+}
+#contactsocialtwitter {
+	width: 100%;
+	height: 600px;
+	background-color: #1da1f2;
+	display: none;
+}
+#contactsocialinstagram {
+	width: 100%;
+	height: 600px;
+	background-image: linear-gradient(#833ab4,#e1306c,#f56040,#fcaf45);
+	display: none;
+}
+#contactsocialtiktok {
+	width: 100%;
+	height: 600px;
+	background-image: linear-gradient(to bottom right,#00f2ea,#000000,#000000,#000000,#000000,#000000,#ff0050);;
+	display: none;
+}
+#contentsocialblockheader {
+	padding-top: 75px;
+	font-family: Kanit;
+	font-size: 64px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+#contentsocialblocktext {
+	padding-top: 100px;
+	font-family: Kanit;
+	font-size: 48px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+#contentsociallink {
+	padding-top: 25px;
+	font-family: Kanit;
+	font-size: 42px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	text-decoration: underline;
+	user-select: none;
 }
 #contactsocialbuttons {
 	width: 100%;
@@ -230,7 +287,7 @@ a.podstrona:hover {
 #buttontiktok {
 	left: 30%;
 	right: 0;
-	background-image: linear-gradient(#00f2ea,#ff0050);
+	background-image: linear-gradient(to bottom right,#00f2ea,#000000,#000000,#ff0050);
 }
 #contactsocialbuttons .fa-brands {
 	position: absolute;
