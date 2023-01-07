@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c43f04151a.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -35,12 +36,38 @@
 	</div>
 </div>
 <div id="contactheader1">DOŁĄCZ DO SPOŁECZNOŚCI DREAMMACHINE</div>
-<div id="contactsocialcontent"></div>
+<div id="contactsocialcontent">
+	<div id="contactsocialfirst">
+		<div id="contentsocialblockheader">BĄDŹ Z NAMI ZAWSZE W KONTAKCIE</div>
+		<div id="contentsocialblocktext">WYBIERZ SWOJE ULUBIONE MEDIUM SPOŁECZNOŚCIOWE<br>
+		INFORMACJE I NOWOŚCI DOTYCZĄCE DREAMMACHINE ZAWSZE POD TWOJĄ RĘKĄ</div>
+	</div>
+	<div id="contactsocialfacebook">
+		<div id="contentsocialblockheader">POLUB NAS NA FACEBOOKU</div>
+		<div id="contentsocialblocktext">WYCZEKUJ NOWYCH POSTÓW OD NASZEJ EKIPY</div>
+		<div id="contentsociallink"><a href="">PRZEJDŹ NA NASZ FANPAGE NA FACEBOOKU</a></div>
+	</div>
+	<div id="contactsocialtwitter">
+		<div id="contentsocialblockheader">DAJ NAM FOLLOWA NA TWITTERZE</div>
+		<div id="contentsocialblocktext">TWEETY OD EKIPY DREAMMACHINE WSZĘDZIE W ZASIĘGU RĘKI</div>
+		<div id="contentsociallink"><a href="">PRZEJDŹ NA NASZ PROFIL NA TWITTERZE</a></div>
+	</div>
+	<div id="contactsocialinstagram">
+		<div id="contentsocialblockheader">OBSERWUJ DREAMMACHINE NA INSTAGRAMIE</div>
+		<div id="contentsocialblocktext">AKTUALNOŚCI O NAJNOWSZYM SPRZĘCIE ZAWSZE Z TOBĄ</div>
+		<div id="contentsociallink"><a href="">PRZEJDŹ NA NASZĄ STRONĘ NA INSTAGRAMIE</a></div>
+	</div>
+	<div id="contactsocialtiktok">
+		<div id="contentsocialblockheader">ŚLEDŹ NASZE AKTUALNOŚCI NA TIKTOKU</div>
+		<div id="contentsocialblocktext">OGLĄDAJ WYGODNIE NASZ CONTENT NA SWOIM URZĄDZENIU MOBILNYM</div>
+		<div id="contentsociallink"><a href="">PRZEJDŹ NA NASZE KONTO TIKTOK</a></div>
+	</div>
+</div>
 <div id="contactsocialbuttons">
-	<div id="buttonfacebook" class="socialbutton"><i id="facebook" class="fa-brands fa-facebook"></i></div>
-	<div id="buttontwitter" class="socialbutton"><i id="twitter" class="fa-brands fa-twitter"></i></div>
-	<div id="buttoninstagram" class="socialbutton"><i id="instagram" class="fa-brands fa-instagram"></i></div>
-	<div id="buttontiktok" class="socialbutton"><i id="tiktok" class="fa-brands fa-tiktok"></i></div>
+	<div id="buttonfacebook" class="socialbutton" onclick="changeFacebook()"><i id="facebook" class="fa-brands fa-facebook"></i></div>
+	<div id="buttontwitter" class="socialbutton" onclick="changeTwitter()"><i id="twitter" class="fa-brands fa-twitter"></i></div>
+	<div id="buttoninstagram" class="socialbutton" onclick="changeInstagram()"><i id="instagram" class="fa-brands fa-instagram"></i></div>
+	<div id="buttontiktok" class="socialbutton" onclick="changeTiktok()"><i id="tiktok" class="fa-brands fa-tiktok"></i></div>
 </div>
 <div id="footer">
 	<div id="footermisc">
@@ -53,6 +80,7 @@
 		<div id="footercopyright">DreamMachine by Mikołaj Adamski @ 2022-2023</div>
 	</div>
 </div>
-<script src="scripts.js"></script>
+<script src="skrypty/scripts.js"></script>
+<script src="skrypty/contact.js"></script>
 </body>
 </html>
