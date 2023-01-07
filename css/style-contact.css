@@ -197,30 +197,56 @@ a.podstrona:hover {
 	width: 100%;
 	height: 600px;
 	background-color: #181818;
+	background-image: url("../grafika/contactparallax.jpg");
+	min-height: 600px;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
 	display: block;
 }
 #contactsocialfacebook {
 	width: 100%;
 	height: 600px;
-	background-color: #4267b2;
+	background-image: linear-gradient(#4267b2,#5576ba);
+	min-height: 600px;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
 	display: none;
 }
 #contactsocialtwitter {
 	width: 100%;
 	height: 600px;
-	background-color: #1da1f2;
+	background-image: linear-gradient(#1da1f2,#34aaf3);
+	min-height: 600px;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
 	display: none;
 }
 #contactsocialinstagram {
 	width: 100%;
 	height: 600px;
 	background-image: linear-gradient(#833ab4,#e1306c,#f56040,#fcaf45);
+	min-height: 600px;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
 	display: none;
 }
 #contactsocialtiktok {
 	width: 100%;
 	height: 600px;
 	background-image: linear-gradient(to bottom right,#00f2ea,#000000,#000000,#000000,#000000,#000000,#ff0050);;
+	min-height: 600px;
+	background-attachment: fixed;
+  	background-position: center;
+  	background-repeat: no-repeat;
+	background-size: cover;
 	display: none;
 }
 #contentsocialblockheader {
@@ -298,6 +324,95 @@ a.podstrona:hover {
 }
 #contactsocialbuttons .fa-instagram {
 	left: 37.5px;
+}
+#contactmapcontent {
+	width: 100%;
+	height: 1050px;
+	background-color: #181818;
+	border-top: 1px solid #0d0d0d;
+	border-bottom: 1px solid #0d0d0d;
+}
+#contactmapheader1 {
+	padding-top: 25px;
+	font-family: Paytone One;
+	font-size: 56px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+#contactmapheader2 {
+	padding-top: 25px;
+	font-family: Paytone One;
+	font-size: 36px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+iframe {
+	position: absolute;
+	border: none;
+	padding-top: 100px;
+	left: 25%;
+}
+#contactmapinformation {
+	position: absolute;
+	padding-top: 300px;
+	width: 500px;
+	height: 500px;
+	right: 15%;
+	font-family: Kanit;
+	font-size: 36px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+#contactmailcontent {
+	width: 100%;
+	height: 900px;
+}
+#contactmailheader {
+	padding-top: 25px;
+	padding-bottom: 75px;
+	font-family: Paytone One;
+	font-size: 56px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+.mailheader {
+	font-family: Kanit;
+	font-size: 30px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+input[type=text] {
+	display: block;
+	position: relative;
+	width: 300px;
+	height: 25px;
+	margin: 0 auto;
+	font-size: 24px;
+	text-align: center;
+	transition: width 0.15s ease-in-out;
+	-webkit-transition: width 0.15s ease-in-out;
+}
+textarea {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	font-size: 24px;
+	width: 450px;
+	height: 200px;
+	font-size: 16px;
+}
+input[type=text]:focus	 {
+	width: 325px;
 }
 #footer {
 	width: 100%;
