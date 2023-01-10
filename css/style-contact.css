@@ -193,6 +193,24 @@ a.podstrona:hover {
 	border-top: 1px solid #0d0d0d;
 	border-bottom: 1px solid #0d0d0d;
 }
+#mainheader {
+	opacity: 0%;
+	animation: welcomeMessage;
+	animation-delay: 0.5s;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+#maintext {
+	opacity: 0%;
+	animation: welcomeMessage;
+	animation-delay: 1s;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+@keyframes welcomeMessage {
+	from {opacity: 0%;}
+	to {opacity: 100%;}
+}
 #contactsocialfirst {
 	width: 100%;
 	height: 600px;
@@ -238,18 +256,7 @@ a.podstrona:hover {
 	background-size: cover;
 	display: none;
 }
-#contactsocialtiktok {
-	width: 100%;
-	height: 600px;
-	background-image: linear-gradient(to bottom right,#00f2ea,#000000,#000000,#000000,#000000,#000000,#ff0050);;
-	min-height: 600px;
-	background-attachment: fixed;
-  	background-position: center;
-  	background-repeat: no-repeat;
-	background-size: cover;
-	display: none;
-}
-#contentsocialblockheader {
+.contentsocialblockheader {
 	padding-top: 75px;
 	font-family: Kanit;
 	font-size: 64px;
@@ -258,7 +265,7 @@ a.podstrona:hover {
 	text-shadow: 5px 5px 5px #000000;
 	user-select: none;
 }
-#contentsocialblocktext {
+.contentsocialblocktext {
 	padding-top: 100px;
 	font-family: Kanit;
 	font-size: 48px;
@@ -267,7 +274,7 @@ a.podstrona:hover {
 	text-shadow: 5px 5px 5px #000000;
 	user-select: none;
 }
-#contentsociallink {
+.contentsociallink {
 	padding-top: 25px;
 	font-family: Kanit;
 	font-size: 42px;
@@ -276,6 +283,16 @@ a.podstrona:hover {
 	text-shadow: 5px 5px 5px #000000;
 	text-decoration: underline;
 	user-select: none;
+}
+#contactsocialcontent .fa-brands {
+	display: block;
+	position:absolute;
+	padding-top: 5%;
+	left: 5%;
+	font-size: 192px;
+	text-align: center;
+	color: #ffffff;
+	opacity: 0.1;
 }
 #contactsocialbuttons {
 	width: 100%;
@@ -291,29 +308,31 @@ a.podstrona:hover {
 	box-shadow: 5px 5px 20px #000000;
 	cursor: pointer;
 	transition: transform 0.1s;
+	opacity: 0%;
+	animation: welcomeMessage;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
 }
 .socialbutton:hover {
 	transform: scale(1.1);
 }
 #buttonfacebook {
 	left: 0;
-	right: 30%;
+	right: 25%;
 	background-color: #4267b2;
+	animation-delay: 1.5s;
 }
 #buttontwitter {
 	left: 0;
-	right: 10%;
+	right: 0;
 	background-color: #1da1f2;
+	animation-delay: 1.75s;
 }
 #buttoninstagram {
-	left: 10%;
+	left: 25%;
 	right: 0;
 	background-image: linear-gradient(#833ab4,#e1306c,#f56040,#fcaf45);
-}
-#buttontiktok {
-	left: 30%;
-	right: 0;
-	background-image: linear-gradient(to bottom right,#00f2ea,#000000,#000000,#ff0050);
+	animation-delay: 2s;
 }
 #contactsocialbuttons .fa-brands {
 	position: absolute;
@@ -371,7 +390,7 @@ iframe {
 }
 #contactmailcontent {
 	width: 100%;
-	height: 900px;
+	height: 850px;
 }
 #contactmailheader {
 	padding-top: 25px;
@@ -384,6 +403,7 @@ iframe {
 	user-select: none;
 }
 .mailheader {
+	padding-top: 15px;
 	font-family: Kanit;
 	font-size: 30px;
 	color: #ffffff;
@@ -391,28 +411,50 @@ iframe {
 	text-shadow: 5px 5px 5px #000000;
 	user-select: none;
 }
-input[type=text] {
+input[type=text], input[type=email] {
 	display: block;
 	position: relative;
-	width: 300px;
-	height: 25px;
+	height: 35px;
 	margin: 0 auto;
 	font-size: 24px;
 	text-align: center;
-	transition: width 0.15s ease-in-out;
-	-webkit-transition: width 0.15s ease-in-out;
+	border: 1px solid #0d0d0d;
+	box-shadow: 5px 5px 20px #000000;
+}
+input[type=text] {
+	width: 300px;
+}
+input[type=email] {
+	width: 350px;
 }
 textarea {
 	display: block;
 	position: relative;
 	margin: 0 auto;
-	font-size: 24px;
+	font-size: 18px;
 	width: 450px;
 	height: 200px;
-	font-size: 16px;
+	border: 1px solid #0d0d0d;
+	box-shadow: 5px 5px 20px #000000;
+	resize: none;
 }
-input[type=text]:focus	 {
-	width: 325px;
+input[type=text], input[type=email], textarea:focus {
+	outline: none;
+}
+input[type=submit] {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 200px;
+	height: 55px;
+	font-family: Kanit;
+	font-size: 18px;
+	color: #ffffff;
+	background-color: #1e1e1e;
+	border: 1px solid #0d0d0d;
+	box-shadow: 5px 5px 20px #000000;
+	cursor: pointer;
 }
 #footer {
 	width: 100%;
