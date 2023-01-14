@@ -76,7 +76,7 @@ if(mysqli_num_rows($wynik) > 0) {
     while($r = mysqli_fetch_assoc($wynik)) {
         echo("
             <div class='produkt'>
-                <div class='produktgrafika'><img src='$r[img_path]'></div>
+                <div class='produktgrafika'><img src='grafika/produkty/$r[img_path]'></div>
 				<div class='produktcena'>$r[cena]zł</div>
                 <div class='produktnazwa'>$r[nazwa]</div>
                 <div class='produktspecs'></div>
