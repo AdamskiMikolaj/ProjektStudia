@@ -1,18 +1,21 @@
 <?php
-echo "Witam";
+
+require_once("php/init.php");
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dream Machine</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Dream Machine - Sklep</title>
+<link rel="stylesheet" type="text/css" href="css/style-shop.css">
 <link rel="icon" href="grafika/icondm.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/c43f04151a.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,6 +29,7 @@ echo "Witam";
 		<div id="menubar2" class="menubar"></div>
 		<div id="menubar3" class="menubar"></div>
 	</div>
+	<div id="koszyk"><i class="fa-solid fa-cart-shopping"></i></div>
 </div>
 <div id="sidemenu">
 	<div id="menumode">
@@ -37,7 +41,36 @@ echo "Witam";
 		<div id="menulangtext">Zmień język</div>
 	</div>
 </div>
-
+<div id="choosearea">
+	<div id="chooseheader">WYBIERZ KATEGORIĘ PRODUKTU</div>
+	<div id="categories">
+		<div class="categories1" id="categories-motherboard" onclick="chooseCategory()">PŁYTY GŁÓWNE</div>
+		<div class="categories2" id="categories-cpu" onclick="chooseCategory()">PROCESORY</div>
+		<div class="categories1" id="categories-gpu" onclick="chooseCategory()">KARTY GRAFICZNE</div>
+		<div class="categories2" id="categories-ram" onclick="chooseCategory()">PAMIĘCI RAM</div>
+		<div class="categories1" id="categories-hddssd" onclick="chooseCategory()">DYSKI HDD/SSD</div>
+		<div class="categories2" id="categories-case" onclick="chooseCategory()">OBUDOWY</div>
+		<div class="categories1" id="categories-mouse" onclick="chooseCategory()">MYSZKI</div>
+		<div class="categories2" id="categories-keyboard" onclick="chooseCategory()">KLAWIATURY</div>
+		<div class="categories1" id="categories-headphones" onclick="chooseCategory()">SŁUCHAWKI</div>
+		<div class="categories2" id="categories-microphone" onclick="chooseCategory()">MIKROFONY</div>
+	</div>
+</div>
+<div id="shoparea">
+<?php
+$wynik = mysqli_query($conn, "SELECT * FROM produkty");
+if(mysqli_num_rows($wynik) > 0) {
+    while($r = mysqli_fetch_assoc($wynik)) {
+        echo("
+            <div class='produkt'>
+                <div class='produktgrafika'></div>
+                <div class='produktnazwa'>$r[nazwa]</div>
+                <div class='produktspecs'>$r[cena]</div>
+            </div><br><br><br>
+        ");
+    }
+}
+?>
 <div id="footer">
 	<div id="footermisc">
 		<div id="footerlogo"><img src="grafika/logodm.png"></div>
@@ -50,5 +83,6 @@ echo "Witam";
 	</div>
 </div>
 <script src="skrypty/scripts.js"></script>
+<script src="skrypty/shopscripts.js"></script>
 </body>
 </html>
