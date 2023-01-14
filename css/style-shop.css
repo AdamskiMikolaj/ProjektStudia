@@ -202,15 +202,14 @@ a.podstrona:hover {
 #choosearea {
 	position: relative;
 	width: 100%;
-	height: 1300px;
+	height: 1050px;
 	background-image: url("../grafika/chooseparallax.jpg");
 	min-height: 700px;
 	background-attachment: fixed;
   	background-position: center;
   	background-repeat: no-repeat;
 	background-size: cover;
-	/* do testów */
-	display: none;
+	/* display: none; */
 }
 #shoparea {
 	position: relative;
@@ -227,22 +226,68 @@ a.podstrona:hover {
 	border: 1px solid #0d0d0d;
 	box-shadow: 0px 0px 25px 5px #000000;
 }
+.produktnazwa {
+	display: block;
+	position: absolute;
+	left: 25%;
+	top: 10px;
+	font-family: Nunito Sans;
+	font-size: 36px;
+	color: #ffffff;
+	text-shadow: 2.5px 2.5px 5px #000000;
+	user-select: none;
+}
 .produktgrafika {
 	position: absolute;
 	left: 2.5%;
 	top: 25px;
 	width: 20%;
-	height: 300px;
-	background-color: rgba(255, 0, 0, 0.178);
+	height: 200px;
+	border: 1px solid #0d0d0d;
+	box-shadow: 0px 0px 25px 5px #000000;
 }
-.produktnazwa {
-	display: block;
+.produktcena {
 	position: absolute;
-	left: 45%;
+	left: 2.5%;
+	top: 250px;
+	width: 20%;
+	height: 75px;
 	font-family: Kanit;
-	font-size: 36px;
+	font-size: 42px;
 	color: #ffffff;
+	text-align: center;
 	text-shadow: 2.5px 2.5px 5px #000000;
+	user-select: none;
+}
+.produktspecs {
+	position: absolute;
+	left: 25%;
+	top: 70px;
+	width: 50%;
+	height: 250px;
+	background-color: #4267b22d;
+}
+.produktdodaj {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	right: 2.5%;
+	bottom: 5%;
+	background-color: #0d0d0d;
+	border: 1px solid #1e1e1e;
+	font-size: 48px;
+	color: #ffffff;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100px;
+	cursor: pointer;
+}
+.produktdodaj:hover {
+	text-shadow: 0px 0px 5px #ffffff;
+}
+img {
+	max-width: 100%;
+	overflow: hidden;
 }
 #chooseheader {
 	padding-top: 50px;
@@ -254,74 +299,66 @@ a.podstrona:hover {
 	user-select: none;
 }
 #categories {
-	position: relative;
-	margin: 0 auto;
-	width: 80%;
-	height: 1150px;
-	font-family: Paytone One;
-	font-size: 52px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    font-family: Paytone One;
+    font-size: 52px;
+    color: #ffffff;
+    text-shadow: 5px 5px 5px #000000;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    user-select: none;
+}
+.categories_item {
+    margin: 10px;
+    width: 40%;
+    box-sizing: border-box;
+    height: 150px;
+    background-color: #1e1e1e;
+    border: 1px solid #0d0d0d;
+    box-shadow: 5px 5px 20px #000000;
+    transition: transform 0.1s;
+    cursor: pointer;
+}
+.categories_item:hover {
+	transform: scale(1.025);
+}
+#return {
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	right: 2.5%;
+	bottom: 2.5%;
+	background-color: #0d0d0d;
+	border: 1px solid #1e1e1e;
+	border-radius: 50%;
+	font-size: 56px;
 	color: #ffffff;
-	text-shadow: 5px 5px 5px #000000;
 	text-align: center;
 	vertical-align: middle;
-	line-height: 150px;
-	user-select: none;
-}
-.categories1 {
-	position: absolute;
-	left: 5%;
-	width: 40%;
-	height: 150px;
-	background-color: #1e1e1e;
-	border: 1px solid #0d0d0d;
-	box-shadow: 5px 5px 20px #000000;
-	transition: transform 0.1s;
+	line-height: 100px;
+    transition: transform 0.5s, border-radius 0.25s, line-height 0.25s;
+	-webkit-transition: transform 0.5s, border-radius 0.25s, line-height 0.25s;
 	cursor: pointer;
+	box-shadow: 5px 5px 10px #000000;
 }
-.categories2 {
-	position: absolute;
-	right: 5%;
-	top: 100px;
-	width: 40%;
-	height: 150px;
-	background-color: #1e1e1e;
-	border: 1px solid #0d0d0d;
-	box-shadow: 5px 5px 20px #000000;
-	transition: transform 0.1s;
-	cursor: pointer;
+#returntext {
+	font-family: Nunito Sans;
+	font-size: 18px;
+	display: none;
+	overflow: hidden;
 }
-.categories1:hover, .categories2:hover {
-	transform: scale(1.05);
+#return:hover {
+	border-radius: 0;
+	line-height: 50px;
 }
-#categories-motherboard {
-	top: 100px;
-}
-#categories-cpu {
-	top: 100px;
-}
-#categories-gpu {
-	top: 300px;
-}
-#categories-ram {
-	top: 300px;
-}
-#categories-hddssd {
-	top: 500px;
-}
-#categories-case {
-	top: 500px;
-}
-#categories-mouse {
-	top: 700px;
-}
-#categories-keyboard {
-	top: 700px;
-}
-#categories-headphones {
-	top: 900px;
-}
-#categories-microphone {
-	top: 900px;
+#return:hover #returntext {
+	display: block;
 }
 #footer {
 	width: 100%;
