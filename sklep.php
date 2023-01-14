@@ -2,6 +2,8 @@
 
 require_once("php/init.php");
 
+$kategoria = isset($_GET['kategoria']) ? $_GET['kategoria'] : '';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,36 +43,56 @@ require_once("php/init.php");
 		<div id="menulangtext">Zmień język</div>
 	</div>
 </div>
+<?php if (empty($kategoria)): ?>
 <div id="choosearea">
-	<div id="chooseheader">WYBIERZ KATEGORIĘ PRODUKTU</div>
-	<div id="categories">
-		<div class="categories1" id="categories-motherboard" onclick="chooseCategory()">PŁYTY GŁÓWNE</div>
-		<div class="categories2" id="categories-cpu" onclick="chooseCategory()">PROCESORY</div>
-		<div class="categories1" id="categories-gpu" onclick="chooseCategory()">KARTY GRAFICZNE</div>
-		<div class="categories2" id="categories-ram" onclick="chooseCategory()">PAMIĘCI RAM</div>
-		<div class="categories1" id="categories-hddssd" onclick="chooseCategory()">DYSKI HDD/SSD</div>
-		<div class="categories2" id="categories-case" onclick="chooseCategory()">OBUDOWY</div>
-		<div class="categories1" id="categories-mouse" onclick="chooseCategory()">MYSZKI</div>
-		<div class="categories2" id="categories-keyboard" onclick="chooseCategory()">KLAWIATURY</div>
-		<div class="categories1" id="categories-headphones" onclick="chooseCategory()">SŁUCHAWKI</div>
-		<div class="categories2" id="categories-microphone" onclick="chooseCategory()">MIKROFONY</div>
-	</div>
+    <div id="chooseheader">WYBIERZ KATEGORIĘ PRODUKTU</div>
+    <div id="categories">
+    <?php
+    $wynik = mysqli_query($conn, "SELECT skrot, nazwa FROM kategorie");
+    if(mysqli_num_rows($wynik) > 0) {
+        while($r = mysqli_fetch_assoc($wynik)) {
+            echo("<a href='sklep.php?kategoria=$r[skrot]' class='categories_item'>$r[nazwa]</a>");
+        }
+    }
+    ?>
+    </div>
 </div>
+<?php else: ?>
 <div id="shoparea">
 <?php
-$wynik = mysqli_query($conn, "SELECT * FROM produkty");
+$wynik = mysqli_query($conn, "
+    SELECT
+        pr.id,
+        pr.nazwa,
+        pr.cena,
+        pr.img_path
+    FROM produkty pr
+    JOIN kategorie ka ON pr.kategoria_id=ka.id
+    WHERE
+        ka.skrot='$kategoria'
+
+");
 if(mysqli_num_rows($wynik) > 0) {
     while($r = mysqli_fetch_assoc($wynik)) {
         echo("
             <div class='produkt'>
-                <div class='produktgrafika'></div>
+                <div class='produktgrafika'><img src='$r[img_path]'></div>
+				<div class='produktcena'>$r[cena]zł</div>
                 <div class='produktnazwa'>$r[nazwa]</div>
-                <div class='produktspecs'>$r[cena]</div>
+                <div class='produktspecs'></div>
+				<div class='produktdodaj'><i class='fa-solid fa-plus'></i></div>
             </div><br><br><br>
         ");
     }
 }
 ?>
+<!-- <i class="fa-solid fa-check"></i> -->
+</div>
+<a href="sklep.php"><div id="return">
+	<i class="fa-solid fa-arrow-left"></i>
+	<div id="returntext">POWRÓT</div>
+</div></a>
+<?php endif ?>
 <div id="footer">
 	<div id="footermisc">
 		<div id="footerlogo"><img src="grafika/logodm.png"></div>
@@ -83,6 +105,5 @@ if(mysqli_num_rows($wynik) > 0) {
 	</div>
 </div>
 <script src="skrypty/scripts.js"></script>
-<script src="skrypty/shopscripts.js"></script>
 </body>
 </html>
