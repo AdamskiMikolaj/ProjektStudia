@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	background-color: #1e1e1e;
 	overflow-x: auto;
+	height: 100vh;
 }
 a {
 	color: #ffffff;
@@ -209,18 +210,14 @@ a.podstrona:hover {
   	background-position: center;
   	background-repeat: no-repeat;
 	background-size: cover;
-	/* display: none; */
 }
 #shoparea {
-	position: relative;
 	width: 100%;
-	height: 2300px;
-	/* display: none; */
+	min-height: 100%;
+	padding-bottom: 20px;
 }
 .produkt {
-	position: relative;
-	top: 100px;
-	margin: 0 auto;
+	margin: 50px auto 50px auto;
 	width: 75%;
 	height: 350px;
 	border: 1px solid #0d0d0d;
@@ -228,57 +225,63 @@ a.podstrona:hover {
 }
 .produktnazwa {
 	display: block;
-	position: absolute;
-	left: 25%;
-	top: 10px;
+	position: relative;
+	width: 60%;
+	left: 35%;
+	top: -250px;
 	font-family: Nunito Sans;
-	font-size: 36px;
+	font-size: 44px;
 	color: #ffffff;
 	text-shadow: 2.5px 2.5px 5px #000000;
 	user-select: none;
 }
 .produktgrafika {
-	position: absolute;
+	position: relative;
 	left: 2.5%;
 	top: 25px;
-	width: 20%;
+	width: 27.5%;
 	height: 200px;
 	border: 1px solid #0d0d0d;
 	box-shadow: 0px 0px 25px 5px #000000;
 }
 .produktcena {
-	position: absolute;
-	left: 2.5%;
-	top: 250px;
+	position: relative;
+	left: 70%;
+	top: 50px;
 	width: 20%;
 	height: 75px;
 	font-family: Kanit;
-	font-size: 42px;
+	font-size: 48px;
 	color: #ffffff;
 	text-align: center;
 	text-shadow: 2.5px 2.5px 5px #000000;
 	user-select: none;
 }
 .produktspecs {
-	position: absolute;
-	left: 25%;
-	top: 70px;
+	position: relative;
+	left: 35%;
+	top: -230px;
 	width: 50%;
 	height: 250px;
-	background-color: #4267b22d;
+	font-family: Nunito Sans;
+	font-size: 30px;
+	color: #ffffff;
+	text-align: left;
+	text-shadow: 2.5px 2.5px 5px #000000;
+	user-select: none;
 }
 .produktdodaj {
-	position: absolute;
+	position: relative;
+	display: block;
 	width: 100px;
 	height: 100px;
-	right: 2.5%;
-	bottom: 5%;
+	right: -90%;
+	bottom: 105%;
 	background-color: #0d0d0d;
 	border: 1px solid #1e1e1e;
 	font-size: 48px;
 	color: #ffffff;
 	text-align: center;
-	vertical-align: middle;
 	line-height: 100px;
 	cursor: pointer;
 }
@@ -296,6 +299,122 @@ img {
 	color: #ffffff;
 	text-shadow: 5px 5px 5px #000000;
 	text-align: center;
+	user-select: none;
+}
+#shopheader {
+	padding-top: 50px;
+	font-family: Paytone One;
+	font-size: 58px;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
+	text-align: center;
+	user-select: none;
+}
+#cartemptyheader {
+	margin-top: 200px;
+	font-family: Paytone One;
+	font-size: 58px;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
+	text-align: center;
+	user-select: none;
+}
+#cartbutton {
+	display: block;
+	width: 450px;
+	height: 100px;
+	margin: auto;
+	margin-top: 225px;
+	font-family: Paytone One;
+	font-size: 42px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	border: 1px solid #0d0d0d;
+	box-shadow: 0px 0px 25px 5px #000000;
+    line-height: 100px;
+	user-select: none;
+	cursor: pointer;
+}
+#pageheader {
+	padding-top: 50px;
+	padding-bottom: 35px;
+	font-family: Paytone One;
+	font-size: 56px;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+#formheader {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-left: 300px;
+	font-family: Paytone One;
+	font-size: 44px;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+.inputheader {
+	margin-left: 300px;
+	margin-top: 10px;
+	font-family: Kanit;
+	font-size: 30px;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+input[type=text] {
+	display: block;
+	position: relative;
+	margin-left: 300px;
+	width: 300px;
+	height: 35px;
+	font-size: 24px;
+	text-align: center;
+	border: 1px solid #0d0d0d;
+	box-shadow: 5px 5px 20px #000000;
+	outline: none;
+}
+input[type=submit] {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 50px;
+	left: 50%;
+	width: 300px;
+	height: 55px;
+	font-family: Kanit;
+	font-size: 28px;
+	color: #ffffff;
+	background-color: #1e1e1e;
+	border: 1px solid #0d0d0d;
+	box-shadow: 5px 5px 20px #000000;
+	cursor: pointer;
+}
+#summaryheader {
+	position: absolute;
+	right: 300px;
+	top: 450px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-family: Paytone One;
+	font-size: 44px;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
+	user-select: none;
+}
+#summarycena {
+	position: absolute;
+	right: 300px;
+	top: 550px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-family: Kanit;
+	font-size: 44px;
+	color: #ffffff;
+	text-shadow: 5px 5px 5px #000000;
 	user-select: none;
 }
 #categories {
