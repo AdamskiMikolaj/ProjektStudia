@@ -2,7 +2,33 @@
 
 require_once("php/init.php");
 
-$kategoria = isset($_GET['kategoria']) ? $_GET['kategoria'] : '';
+$kategoria = !empty($_GET['kategoria']) ? htmlspecialchars($_GET['kategoria'], ENT_QUOTES, 'UTF-8') : '';
+if (!empty($_GET['produkt_id'])) {
+	$produkt_id = htmlspecialchars($_GET['produkt_id'], ENT_QUOTES, 'UTF-8');
+
+	$stmt = mysqli_prepare($conn, "
+		SELECT
+			id
+		FROM produkty
+		WHERE
+			id = ?
+	");
+	mysqli_stmt_bind_param($stmt, 's', $produkt_id);
+	mysqli_stmt_execute($stmt);
+	$wynik = mysqli_stmt_get_result($stmt);
+	if(mysqli_num_rows($wynik) > 0) {
+		if (!empty($_SESSION['koszyk'])) {
+			if (!in_array($produkt_id, $_SESSION['koszyk'])) {
+				$_SESSION['koszyk'][] = $produkt_id;
+			}
+		} else {
+			$_SESSION['koszyk'][] = $produkt_id;
+		}
+	}
+
+	header("Location: sklep.php?kategoria=$kategoria");
+	exit;
+}
 
 ?>
 <!DOCTYPE html>
@@ -31,7 +57,7 @@ $kategoria = isset($_GET['kategoria']) ? $_GET['kategoria'] : '';
 		<div id="menubar2" class="menubar"></div>
 		<div id="menubar3" class="menubar"></div>
 	</div>
-	<div id="koszyk"><i class="fa-solid fa-cart-shopping"></i></div>
+	<a href="koszyk.php" id="koszyk"><i class="fa-solid fa-cart-shopping"></i></a>
 </div>
 <div id="sidemenu">
 	<div id="menumode">
@@ -60,33 +86,68 @@ $kategoria = isset($_GET['kategoria']) ? $_GET['kategoria'] : '';
 <?php else: ?>
 <div id="shoparea">
 <?php
-$wynik = mysqli_query($conn, "
-    SELECT
-        pr.id,
-        pr.nazwa,
-        pr.cena,
-        pr.img_path
-    FROM produkty pr
-    JOIN kategorie ka ON pr.kategoria_id=ka.id
-    WHERE
-        ka.skrot='$kategoria'
-
+$stmt = mysqli_prepare($conn, "
+	SELECT
+		nazwa
+	FROM kategorie
+	WHERE
+		skrot = ?
 ");
+mysqli_stmt_bind_param($stmt, 's', $kategoria);
+mysqli_stmt_execute($stmt);
+$wynik = mysqli_stmt_get_result($stmt);
 if(mysqli_num_rows($wynik) > 0) {
-    while($r = mysqli_fetch_assoc($wynik)) {
-        echo("
-            <div class='produkt'>
-                <div class='produktgrafika'><img src='grafika/produkty/$r[img_path]'></div>
+	while($r = mysqli_fetch_assoc($wynik)) {
+		echo("<div id='shopheader'>$r[nazwa]</div>");
+	}
+}
+$stmt = mysqli_prepare($conn, "
+	SELECT
+		pr.id,
+		pr.nazwa,
+		pr.cena,
+		pr.img_path
+	FROM produkty pr
+	JOIN kategorie ka ON pr.kategoria_id=ka.id
+	WHERE
+		ka.skrot = ?
+");
+mysqli_stmt_bind_param($stmt, 's', $kategoria);
+mysqli_stmt_execute($stmt);
+$wynik = mysqli_stmt_get_result($stmt);
+if(mysqli_num_rows($wynik) > 0) {
+	while($r = mysqli_fetch_assoc($wynik)) {
+		echo("
+			<div class='produkt'>
+				<div class='produktgrafika'><img src='grafika/produkty/$r[img_path]'></div>
 				<div class='produktcena'>$r[cena]zł</div>
-                <div class='produktnazwa'>$r[nazwa]</div>
-                <div class='produktspecs'></div>
-				<div class='produktdodaj'><i class='fa-solid fa-plus'></i></div>
-            </div><br><br><br>
-        ");
-    }
+				<div class='produktnazwa'>$r[nazwa]</div>
+				<div class='produktspecs'>
+		");
+		$stmt2 = mysqli_prepare($conn, "
+			SELECT
+				nazwa,
+				wartosc
+			FROM specyfikacja
+			WHERE
+				produkt_id = ?
+		");
+		mysqli_stmt_bind_param($stmt2, 's', $r['id']);
+		mysqli_stmt_execute($stmt2);
+		$wynik2 = mysqli_stmt_get_result($stmt2);
+		if(mysqli_num_rows($wynik2) > 0) {
+			while($r2 = mysqli_fetch_assoc($wynik2)) {
+				echo("$r2[nazwa]: $r2[wartosc]<br>");
+			}
+		}
+		echo("
+			</div>
+				<a href='sklep.php?kategoria=$kategoria&produkt_id=$r[id]' class='produktdodaj'><i class='fa-solid fa-".(in_array($r['id'], $_SESSION['koszyk'])?'check':'plus')."'></i></a>
+			</div>
+		");
+	}
 }
 ?>
-<!-- <i class="fa-solid fa-check"></i> -->
 </div>
 <a href="sklep.php"><div id="return">
 	<i class="fa-solid fa-arrow-left"></i>
